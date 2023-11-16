@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "jp.co.mukeisoftllc.ex.quarkus.gpc";
+option java_outer_classname = "FileService";
+
+package files;
+
+service FileGrpcService {
+  rpc saveText (TextWriteRequest) returns (Response) {}
+  rpc saveImage (ImageWriteRequest) returns (Response) {}
+  rpc readText (SavedFileRequest) returns (TextReadResponse) {}
+  rpc readImage (SavedFileRequest) returns (ImageReadResponse) {}
+}
+
+message TextWriteRequest {
+  string name = 1;
+  string text = 2;
+}
+
+message SavedFileRequest {
+  string name = 1;
+}
+
+message TextReadResponse {
+  string content = 1;
+}
+
+message ImageWriteRequest {
+  string name = 1;
+  bytes content = 2;
+}
+
+message ImageReadResponse {
+  bytes content = 1;
+}
+
+message Response {
+  bool result = 1;
+}
+
+
