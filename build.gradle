@@ -13,12 +13,11 @@ repositories {
 }
 
 dependencies {
-    implementation("jp.co.mukeisoftllc.ex:spring-world-ex:0.0.4")
+    implementation("jp.co.mukeisoftllc.ex:spring-world-ex:0.0.5")
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-grpc'
     implementation 'io.quarkus:quarkus-arc'
     implementation "io.quarkus:quarkus-spring-di"
-    implementation("org.springframework:spring-core:6.0.13")
 
     runtimeOnly(group: 'org.ow2.asm', name: 'asm', version: '9.5')
 

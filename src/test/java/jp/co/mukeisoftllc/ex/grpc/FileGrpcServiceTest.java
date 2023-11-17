@@ -23,7 +23,7 @@ class FileGrpcServiceTest {
     @BeforeAll
     static void beforeAll() {
         int port = ConfigProvider.getConfig().getValue("quarkus.http.test-port", Integer.class);
-        channel = ManagedChannelBuilder.forAddress("localhost", port)
+        channel = ManagedChannelBuilder.forAddress("127.0.0.1", port)
                 .usePlaintext()
                 .build();
     }
