@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-    implementation("jp.co.mukeisoftllc.ex:spring-world-ex:0.0.6")
+    implementation("jp.co.mukeisoftllc.ex:spring-world-ex:0.0.7")
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkus:quarkus-grpc'
     implementation 'io.quarkus:quarkus-arc'
